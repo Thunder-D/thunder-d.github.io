@@ -33,7 +33,7 @@
 
 @media (max-width: 1799px) {
 	.banner { padding: 200px 0 0; }
-	.banner__logo { width: 80px; }
+	.banner__logo { width: 80px; margin: 0 0 25px; }
 	.banner__title {
 		margin: 0 0 20px;
 		font-size: 16px;
