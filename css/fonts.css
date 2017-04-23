@@ -1,0 +1,17 @@
+@font-face {
+	font-family: "AgencyFB-Regular";
+	src: url("../fonts/AgencyFB-Regular.eot"); /* IE9 Compat Modes */
+	src: url("../fonts/AgencyFB-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+			url("../fonts/AgencyFB-Regular.woff") format("woff"), /* Pretty Modern Browsers */
+			url("../fonts/AgencyFB-Regular.ttf")  format("truetype"), /* Safari, Android, iOS */
+			url("../fonts/AgencyFB-Regular.svg#svgFontName") format("svg"); /* Legacy iOS */
+}
+
+@font-face {
+	font-family: "Micra";
+	src: url("../fonts/Micra.eot"); /* IE9 Compat Modes */
+	src: url("../fonts/Micra.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+			url("../fonts/Micra.woff") format("woff"), /* Pretty Modern Browsers */
+			url("../fonts/Micra.ttf")  format("truetype"), /* Safari, Android, iOS */
+			url("../fonts/Micra.svg#svgFontName") format("svg"); /* Legacy iOS */
+}

@@ -1,0 +1,36 @@
+.question {
+	position: relative;
+	padding: 0 0 142px;
+}
+
+	.question__name {
+		margin: 0 0 85px;
+		font: 400 55px "AgencyFB-Regular", sans-serif;
+		text-transform: uppercase;
+		color: #fff;
+	}
+
+	.question__button {
+		position: relative;
+		display: inline-block;
+		width: 310px;
+		margin: 0 100px 0 0;
+		padding: 20px 45px;
+		font: 400 19px "Micra", sans-serif;
+		text-decoration: none;
+		text-transform: uppercase;
+		color: #f1c40f;
+		border: 3px solid #f1c40f;
+		border-radius: 40px;
+		vertical-align: middle;
+		transition: all 0.25s ease-in;
+	}
+
+	.question__button:hover {
+		color: #333;
+		background: #f1c40f;
+	}
+
+		.question__button:last-child {
+			margin: 0 0 0 100px;
+		}
