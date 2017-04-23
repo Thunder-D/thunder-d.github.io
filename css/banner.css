@@ -27,3 +27,20 @@
 		text-transform: uppercase;
 		color: #fff;
 	}
+
+
+
+
+@media (max-width: 1799px) {
+	.banner { padding: 200px 0 0; }
+	.banner__logo { width: 80px; }
+	.banner__title {
+		margin: 0 0 20px;
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 599px) {}
+@media (min-width: 600px) {}
+@media (min-width: 900px) {}
+@media (min-width: 1200px) {}
