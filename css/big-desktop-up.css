@@ -1,0 +1,258 @@
+/******************************* 1. MAIN *******************************/
+/******************************* 2. BANNER *****************************/
+/******************************* 3. TOP-LINE ***************************/
+/******************************* 4. QUESTION ***************************/
+
+
+/**************
+		1. MAIN
+ **************/
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	max-width: 1170px;
+	min-width: 1004px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+
+
+
+/******************
+		2. BANNER
+ ******************/
+.banner {
+	padding: 250px 0 0;
+	text-align: center;
+	transition: padding 1s ease-in-out;
+}
+
+.banner--questions { padding: 150px 0 0; }
+
+.banner::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: url(../img/thunder__banner.jpg) 0 0 no-repeat;
+	background-size: cover;
+}
+
+	.banner__logo {
+		position: relative;
+		margin: 0 0 99px;
+		transition: margin 1s ease-in-out;
+	}
+
+	.banner__logo--questions { margin: 0 0 50px; }
+
+	.banner__title {
+		position: relative;
+		margin: 0 0 39px;
+		font: 400 19px "Micra", sans-serif;
+		text-transform: uppercase;
+		color: #fff;
+	}
+
+
+
+
+/******************
+		3. TOP-LINE
+ ******************/
+.top-line {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 105px;
+	background: #333;
+}
+
+	.top-line__logo {
+		float: left;
+		display: inline-block;
+		margin: 21px 0 0 0;
+	}
+
+	.top-line__menu {
+		float: right;
+		margin: 42px 0 0;
+	}
+
+		.top-line__menu li { display: inline-block; }
+
+			.top-line__menu-link {
+				position: relative;
+				margin: 0 0 0 37px;
+				font: 400 14px "Micra", sans-serif;
+				text-decoration: none;
+				color: #fff;
+				transition: color 0.25s ease-in-out;
+			}
+
+			.top-line__menu-link:hover { color: #f1c40f; }
+			.top-line__menu-link--active { color: #f1c40f; }
+
+			.top-line__menu-link--active::after {
+				content: "";
+				position: absolute;
+				bottom: -47px;
+				left: 0;
+				right: 0;
+				height: 5px;
+				background: #f1c40f;
+			}
+
+
+
+
+/*******************
+		4. QUESTION
+ *******************/
+.question {
+	position: relative;
+	min-width: 1004px;
+	padding: 0 0 100px;
+	opacity: 1;
+	transition: all 1s ease-in-out;
+}
+
+.question--hide {
+	margin: -25px 0 0;
+	opacity: 0;
+}
+
+	.question__name {
+		margin: 0 0 85px;
+		font: 400 55px "AgencyFB-Regular", sans-serif;
+		text-transform: uppercase;
+		color: #fff;
+	}
+
+	.question__button {
+		position: relative;
+		display: inline-block;
+		width: 310px;
+		margin: 0 100px 0 0;
+		padding: 20px 45px;
+		font: 400 19px "Micra", sans-serif;
+		text-decoration: none;
+		text-transform: uppercase;
+		color: #f1c40f;
+		border: 3px solid #f1c40f;
+		border-radius: 40px;
+		vertical-align: middle;
+		transition: all 0.25s ease-in;
+	}
+
+	.question__button:hover {
+		color: #333;
+		background: #f1c40f;
+	}
+
+		.question__button:last-child { margin: 0 0 0 100px; }
+
+	.question__design {
+		display: none;
+		margin: -50px 0 50px;
+	}
+
+		.question__design-item {
+			position: relative;
+			display: inline-block;
+			width: 180px;
+			height: 240px;
+			margin: 0 30px;
+			border-radius: 10px;
+			overflow: hidden;
+		}
+
+		.question__design-item::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: rgba(51, 51, 51, 0.25);
+		}
+
+		.question__design-item:hover::after {
+			content: "";
+			background: none;
+		}
+
+			.question__design-item img { width: 100%; }
+
+			.question__design-item input { display: none; }
+
+			.question__design-item input + label {
+				content: "";
+				position: absolute;
+				top: 10px;
+				right: 10px;
+				width: 30px;
+				height: 30px;
+				border-radius: 50%;
+				border: 3px solid #f1c40f;
+				z-index: 1;
+			}
+
+			.question__design-item input:checked + label {
+				content: "";
+				background: #f1c40f;
+			}
+
+	.question__choise,
+	.question__seo {
+		display: none;
+		margin: -30px 0 60px;
+	}
+
+		.question__choise label,
+		.question__seo label {
+			display: block;
+			width: 410px;
+			margin: 0 auto 20px;
+			font: 400 19px "Micra", sans-serif;
+			text-align: left;
+			text-transform: uppercase;
+			color: #fff;
+		}
+
+		.question__seo label {
+			width: 190px;
+		}
+
+		.question__choise input,
+		.question__seo input { vertical-align: middle; }
+
+	.question__contact {
+		display: none;
+		width: 300px;
+		margin: -30px auto 50px;
+	}
+
+		.question__contact input {
+			width: 100%;
+			margin: 0 0 20px;
+			padding: 10px 10px;
+			font-size: 16px;
+			border-radius: 5px;
+			border: 3px solid #333;
+			outline: none;
+			box-sizing: border-box;
+		}
+
+		.question__contact input:focus {
+			border: 3px solid #f1c40f;
+		}

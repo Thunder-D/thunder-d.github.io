@@ -10,12 +10,18 @@
 	<title>Thunder Design Studio</title>
 
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" media="(max-width: 599px)" href="css/phone-only.css">
+	<link rel="stylesheet" media="(min-width: 600px) and (max-width: 899px)" href="css/tablet-portrait-up.css">
+	<link rel="stylesheet" media="(min-width: 900px) and (max-width: 1199px)" href="css/tablet-landscape-up.css">
+	<link rel="stylesheet" media="(min-width: 1200px) and (max-width: 1799px)" href="css/desktop-up.css">
+	<link rel="stylesheet" media="(min-width: 1800px)" href="css/big-desktop-up.css">
 
 </head>
 <body>
 
 	<!-- BANNER -->
 	<div class="banner">
+
 
 		<!-- TOP-LINE -->
 		<div class="top-line">
@@ -33,14 +39,16 @@
 		</div>
 		<!-- //TOP-LINE -->
 
+
 		<div class="container">
 			<img class="banner__logo" src="img/thunder__banner-logo.png" alt="Thunder Design Studio">
 			<div class="banner__title">Think small</div>
 		</div>
 
+
 		<!-- QUESTION -->
 		<div class="question">
-			<div class="question__name">Do you need web site as...</div>
+			<div class="question__name">Which website do you need?</div>
 
 			<div class="question__design">
 				<a class="question__design-item" href="#" title="">
@@ -65,17 +73,31 @@
 				</a>
 			</div>
 
+
 			<div class="question__choise">
-				<label><input type="checkbox"> Cont</label>
-				<label><input type="checkbox"> Descr</label>
-				<label><input type="checkbox"> Info</label>
-				<label><input type="checkbox"> Serv</label>
-				<label><input type="checkbox"> etc...</label>
+				<label><input type="checkbox"> Contact us</label>
+				<label><input type="checkbox"> Information filling form</label>
+				<label><input type="checkbox"> Our services</label>
+				<label><input type="checkbox"> Portfolio</label>
+				<label><input type="checkbox"> Our location</label>
+			</div>
+
+			<div class="question__seo">
+				<label><input type="checkbox"> Facebook</label>
+				<label><input type="checkbox"> Google</label>
+				<label><input type="checkbox"> Instagram</label>
+				<label><input type="checkbox"> Portfolio</label>
+				<label><input type="checkbox"> etc.</label>
+			</div>
+
+			<div class="question__contact">
+				<input type="phone">
+				<input type="email">
 			</div>
 
 
-			<a class="question__button" href="#" title="">Simple (1 page)</a>
-			<a class="question__button" href="#" title="">Complicateed <nobr>(more than 1)</nobr></a>
+			<a class="question__button" href="#" title="Landing Page (1-page website)">Landing Page <nobr>(1-page website)</nobr></a>
+			<a class="question__button" href="#" title="Structured website (more than a page)">Structured website <nobr>(more than a page)</nobr></a>
 		</div>
 		<!-- //QUESTION -->
 

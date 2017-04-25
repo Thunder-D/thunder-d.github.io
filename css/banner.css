@@ -1,49 +1,11 @@
-.banner {
-	padding: 314px 0 0;
-	text-align: center;
 
-	transition: padding 1s ease-in-out;
-}
-
-.banner--questions {
-	padding: 150px 0 0;
-}
-
-.banner::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background: url(../img/thunder__banner.jpg) 0 0 no-repeat;
-	background-size: cover;
-}
-
-	.banner__logo {
-		position: relative;
-		margin: 0 0 99px;
-		transition: margin 1s ease-in-out;
-	}
-
-	.banner__logo--questions {
-		margin: 0 0 50px;
-	}
-
-	.banner__title {
-		position: relative;
-		margin: 0 0 39px;
-		font: 400 19px "Micra", sans-serif;
-		text-transform: uppercase;
-		color: #fff;
-	}
 
 
 
 
 @media (max-width: 1799px) {
 	.banner { padding: 200px 0 0; }
-	.banner--questions { padding: 100px 0 0; }
+	.banner--questions { padding: 130px 0 0; }
 	.banner__logo { width: 80px; margin: 0 0 25px; }
 	.banner__logo--questions { margin: 0 0 25px; }
 	.banner__title {

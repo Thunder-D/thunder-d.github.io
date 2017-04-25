@@ -1,18 +1,285 @@
 'use strict';
 
 
-// Вопросы
-var question = 0;
+// Порядковый номер вопроса и ветка
+var questionCounter = 0;
+var questionBranch  = 0;
 
 
-// Клик по кнопке - вызов функции
+// Клик по кнопке - переход к следующему вопросу
 var buttons = document.querySelectorAll('.question__button');
 
 for (let i = 0; i < buttons.length; i++) {
 	buttons[i].onclick = function(event) {
 		event.preventDefault();
-		changeQuestion();
+		changeQuestion(i);
 	}
+}
+
+
+// Функция смена вопроса
+function changeQuestion(num) {
+
+	// Если это самый первый вопрос - выбираем ветку и сужаем шапку
+	if (questionCounter === 0) {
+
+		// Ветка
+		questionBranch = num;
+
+		// Сужение шапки
+		var banner = document.querySelector('.banner');
+		var logo = document.querySelector('.banner__logo');
+		var questionBlock = document.querySelector('.question');
+		var questionName = document.querySelector('.question__name');
+		var firstButton = buttons[0];
+		var secondButton = buttons[1];
+
+		banner.classList.add('banner--questions');
+		logo.classList.add('banner__logo--questions');
+		questionBlock.classList.add('question--hide');
+
+		// Смена вопроса и кнопок
+		setTimeout(function() {
+			questionName.innerHTML = 'Do you have a corporate style<br>(logo, style, color palette etc)?';
+			firstButton.innerHTML = 'Yes';
+			secondButton.innerHTML = 'No';
+		}, 1500);
+
+		// Показ вопроса
+		setTimeout(function() {
+			questionBlock.classList.remove('question--hide');
+		}, 1600);
+
+		questionCounter++;
+
+	// Если второй вопрос - смена вопроса
+	} else if (questionCounter === 1) {
+
+		var questionBlock = document.querySelector('.question');
+		var questionName = document.querySelector('.question__name');
+		var firstButton = buttons[0];
+		var secondButton = buttons[1];
+
+		questionBlock.classList.add('question--hide');
+
+		// Смена вопроса и кнопок
+		setTimeout(function() {
+			questionName.innerHTML = 'Do you wish to animate<br>your website?';
+			firstButton.innerHTML = 'Yes';
+			secondButton.innerHTML = 'No';
+		}, 1500);
+
+		// Показ вопроса
+		setTimeout(function() {
+			questionBlock.classList.remove('question--hide');
+		}, 1600);
+
+		questionCounter++;
+
+	} else if (questionCounter === 2)  {
+
+		if (questionBranch === 0) {
+			var questionBlock = document.querySelector('.question');
+			var questionName = document.querySelector('.question__name');
+			var questionDesign = document.querySelector('.question__design');
+			var firstButton = buttons[0];
+			var secondButton = buttons[1];
+
+			questionBlock.classList.add('question--hide');
+
+			// Смена вопроса и кнопок
+			setTimeout(function() {
+				questionName.innerHTML = 'Choose style you are the most attracted to:';
+				questionDesign.style.display = 'block';
+				firstButton.innerHTML = 'Ok';
+				secondButton.innerHTML = 'Skip';
+			}, 1500);
+
+			// Показ вопроса
+			setTimeout(function() {
+				questionBlock.classList.remove('question--hide');
+			}, 1600);
+
+			questionCounter++;
+		} else {
+			// var questionBlock = document.querySelector('.question');
+			// var questionName = document.querySelector('.question__name');
+			// var firstButton = buttons[0];
+			// var secondButton = buttons[1];
+			//
+			// questionBlock.classList.add('question--hide');
+			//
+			// // Смена вопроса и кнопок
+			// setTimeout(function() {
+			// 	questionName.innerHTML = 'Do you wish to animate<br>your website?';
+			// 	firstButton.innerHTML = 'Yes';
+			// 	secondButton.innerHTML = 'No';
+			// }, 1500);
+			//
+			// // Показ вопроса
+			// setTimeout(function() {
+			// 	questionBlock.classList.remove('question--hide');
+			// }, 1600);
+			//
+			// questionCounter++;
+		}
+
+	} else if (questionCounter === 3)  {
+
+		if (questionBranch === 0) {
+			var questionBlock = document.querySelector('.question');
+			var questionName = document.querySelector('.question__name');
+			var questionDesign = document.querySelector('.question__design');
+			var questionChoise = document.querySelector('.question__choise');
+			var firstButton = buttons[0];
+			var secondButton = buttons[1];
+
+			questionBlock.classList.add('question--hide');
+
+			setTimeout(function() {
+				questionName.innerHTML = 'What to include?';
+				questionDesign.style.display = 'none';
+				questionChoise.style.display = 'block';
+
+				firstButton.innerHTML = 'Ok';
+				secondButton.innerHTML = 'Skip';
+			}, 1500);
+
+			setTimeout(function() {
+				questionBlock.classList.remove('question--hide');
+			}, 1600);
+
+			questionCounter++;
+		} else {
+			// var questionBlock = document.querySelector('.question');
+			// var questionName = document.querySelector('.question__name');
+			// var firstButton = buttons[0];
+			// var secondButton = buttons[1];
+			//
+			// questionBlock.classList.add('question--hide');
+			//
+			// // Смена вопроса и кнопок
+			// setTimeout(function() {
+			// 	questionName.innerHTML = 'Do you wish to animate<br>your website?';
+			// 	firstButton.innerHTML = 'Yes';
+			// 	secondButton.innerHTML = 'No';
+			// }, 1500);
+			//
+			// // Показ вопроса
+			// setTimeout(function() {
+			// 	questionBlock.classList.remove('question--hide');
+			// }, 1600);
+			//
+			// questionCounter++;
+		}
+
+	} else if (questionCounter === 4) {
+
+		var questionBlock = document.querySelector('.question');
+		var questionName = document.querySelector('.question__name');
+		var questionChoise = document.querySelector('.question__choise');
+		var questionSeo = document.querySelector('.question__seo');
+		var firstButton = buttons[0];
+		var secondButton = buttons[1];
+
+		questionBlock.classList.add('question--hide');
+
+		// Смена вопроса и кнопок
+		setTimeout(function() {
+			questionName.innerHTML = 'Do you want to rank top (SEO&SMM)?';
+			questionChoise.style.display = 'none';
+			questionSeo.style.display = 'block';
+			firstButton.innerHTML = 'Ok';
+			secondButton.innerHTML = 'Skip';
+		}, 1500);
+
+		// Показ вопроса
+		setTimeout(function() {
+			questionBlock.classList.remove('question--hide');
+		}, 1600);
+
+		questionCounter++;
+
+	} else if (questionCounter === 5) {
+
+		var questionBlock = document.querySelector('.question');
+		var questionName = document.querySelector('.question__name');
+		var questionSeo = document.querySelector('.question__seo');
+		var firstButton = buttons[0];
+		var secondButton = buttons[1];
+
+		questionBlock.classList.add('question--hide');
+
+		// Смена вопроса и кнопок
+		setTimeout(function() {
+			questionName.innerHTML = 'In which time you want<br>the website to be ready?';
+			questionSeo.style.display = 'none';
+			firstButton.innerHTML = '24 hours';
+			secondButton.innerHTML = 'Choose your prefered timing';
+		}, 1500);
+
+		// Показ вопроса
+		setTimeout(function() {
+			questionBlock.classList.remove('question--hide');
+		}, 1600);
+
+		questionCounter++;
+
+	} else if (questionCounter === 6) {
+
+		var questionBlock = document.querySelector('.question');
+		var questionName = document.querySelector('.question__name');
+		var questionContact= document.querySelector('.question__contact');
+		var firstButton = buttons[0];
+		var secondButton = buttons[1];
+
+		questionBlock.classList.add('question--hide');
+
+		// Смена вопроса и кнопок
+		setTimeout(function() {
+			questionName.innerHTML = 'Please type your mobile number<br>and E-mail (or log in with your account)';
+			questionContact.style.display = 'block';
+			firstButton.innerHTML = 'Ok';
+			firstButton.style.margin = '0';
+			secondButton.style.display = 'none';
+		}, 1500);
+
+		// Показ вопроса
+		setTimeout(function() {
+			questionBlock.classList.remove('question--hide');
+		}, 1600);
+
+		questionCounter++;
+
+	} else if (questionCounter === 7) {
+
+		var banner = document.querySelector('.banner');
+		var logo = document.querySelector('.banner__logo');
+		var questionBlock = document.querySelector('.question');
+		var questionName = document.querySelector('.question__name');
+		var questionContact= document.querySelector('.question__contact');
+		var firstButton = buttons[0];
+
+		questionBlock.classList.add('question--hide');
+
+		// Смена вопроса и кнопок
+		setTimeout(function() {
+			banner.classList.remove('banner--questions');
+			logo.classList.remove('banner__logo--questions');
+			questionName.innerHTML = 'Your order is being processed.<br>Thank you for choosing us.';
+			questionContact.style.display = 'none';
+			firstButton.style.display = 'none';
+		}, 1500);
+
+		// Показ вопроса
+		setTimeout(function() {
+			questionBlock.classList.remove('question--hide');
+		}, 1600);
+
+		questionCounter++;
+
+	}
+
 }
 
 
@@ -31,8 +298,36 @@ for (let i = 0; i < designs.length; i++) {
 }
 
 
+
+/*
+[
+	[
+		'',
+		'',
+		'',
+		'',
+		'Choose style you are the most attracted to',
+		'What to include?'
+	],
+	[
+		'',
+		'',
+		'',
+		'',
+		'Which type of a website you need?',
+		'Choose style you are the most attracted to'
+	]
+]
+
+
+	Do you want to rank top (SEO&SMM)?
+	In which time you want the website to be ready?
+*/
+
+
+
 // Ф-ия слайда
-function changeQuestion() {
+/*function changeQuestion() {
 
 	switch (question) {
 		case 0:
@@ -137,7 +432,7 @@ function changeQuestion() {
 
 
 
-}
+}*/
 
 
 // JSON
