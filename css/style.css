@@ -120,8 +120,8 @@
 
 .question__item-name {
 	margin: 0 0 85px;
-	font: 400 55px "AgencyFB-Regular", sans-serif;
-	text-transform: uppercase;
+	font: 400 45px "Humnst777", sans-serif;
+	/*text-transform: uppercase;*/
 	color: #fff;
 }
 
@@ -131,7 +131,7 @@
 	width: 310px;
 	margin: 0;
 	padding: 20px 45px;
-	font: 400 19px "Micra", sans-serif;
+	font: 400 19px "Futura", sans-serif;
 	text-decoration: none;
 	text-transform: uppercase;
 	color: #f1c40f;
@@ -146,7 +146,7 @@
 }
 
 .question__item-button:hover {
-	color: #333;
+	color: #000;
 	background: #f1c40f;
 }
 
@@ -306,19 +306,44 @@
 .question__structure label,
 .question__seo label,
 .question__type label {
+	position: relative;
 	display: block;
 	width: 410px;
 	margin: 0 auto 20px;
+	padding: 0 0 0 40px;
 	font: 400 19px "Micra", sans-serif;
 	text-align: left;
 	text-transform: uppercase;
 	color: #fff;
+	cursor: pointer;
 }
 
 .question__structure input,
 .question__seo input,
 .question__type input {
-	vertical-align: middle;
+	display: none;
+}
+
+.question__structure input + span,
+.question__seo input + span,
+.question__type input + span {
+	position: absolute;
+	left: 0;
+	width: 15px;
+	height: 15px;
+	border: 3px solid #f1c40f;
+	background-color: #565655;
+}
+
+.question__structure input:checked + span,
+.question__seo input:checked + span,
+.question__type input:checked + span {
+	position: absolute;
+	left: 0;
+	width: 15px;
+	height: 15px;
+	border: 3px solid #f1c40f;
+	background-color: #f1c40f;
 }
 
 .question__type label {

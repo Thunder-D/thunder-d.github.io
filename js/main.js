@@ -216,14 +216,12 @@ for (let i = 0; i < buttons.length; i++) {
 			// Освобождаем место для вопросов
 			logo.classList.add('question__logo--top');
 
-		} else if (countOfQuestion === 7) {
-			logo.classList.remove('question__logo--top');
-			commentArea.classList.add('hide');
-			firstButton.classList.add('question__item-button--hide');
+		/*} else if (countOfQuestion === 7) {
+			logo.classList.remove('question__logo--top');*/
 		}
 
 		// Показываем следующий вопрос, если кнопка не заблокирована
-		if (!buttons[i].classList.contains('question__item-button--disabled') && countOfQuestion !== 7) {
+		if (!buttons[i].classList.contains('question__item-button--disabled')) {
 			nextQuestion();
 		}
 
@@ -344,12 +342,23 @@ function currentQuestion() {
 		// 7 вопрос - общий
 		case '1 6':
 		case '2 6':
-			questionName.innerHTML = 'Your order is being processed.<br>Thank you for choosing us.';
+			questionName.innerHTML = 'Do you want to leave<br>a comment for your order?';
 			contact.style.display = 'none';
 			comment.style.display = 'block';
 			firstButton.innerHTML = 'Ok';
 			firstButton.classList.add('question__item-button--disabled');
+			secondButton.style.display = 'inline-block';
+			secondButton.innerHTML = 'Skip';
+			break;
+
+		// 8 вопрос - общий
+		case '1 7':
+		case '2 7':
+			questionName.innerHTML = 'Your order is being processed.<br>Thank you for choosing us.';
+			comment.style.display = 'none';
+			firstButton.style.display = 'none';
 			secondButton.style.display = 'none';
+			logo.classList.remove('question__logo--top');
 			break;
 	}
 
