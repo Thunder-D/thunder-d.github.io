@@ -1,29 +1,11 @@
 /* FONTS */
 @font-face {
-	font-family: "AgencyFB-Regular";
-	src: url("../fonts/AgencyFB-Regular.eot"); /* IE9 Compat Modes */
-	src: url("../fonts/AgencyFB-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-		 url("../fonts/AgencyFB-Regular.woff") format("woff"), /* Pretty Modern Browsers */
-		 url("../fonts/AgencyFB-Regular.ttf")  format("truetype"), /* Safari, Android, iOS */
-		 url("../fonts/AgencyFB-Regular.svg#svgFontName") format("svg"); /* Legacy iOS */
-}
-
-@font-face {
 	font-family: "Micra";
-	src: url("../fonts/Micra.eot"); /* IE9 Compat Modes */
-	src: url("../fonts/Micra.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-		 url("../fonts/Micra.woff") format("woff"), /* Pretty Modern Browsers */
-		 url("../fonts/Micra.ttf")  format("truetype"), /* Safari, Android, iOS */
-		 url("../fonts/Micra.svg#svgFontName") format("svg"); /* Legacy iOS */
-}
-
-@font-face {
-	font-family: "Futura";
-	src: url("../fonts/Futura-Bk-BT/futura-bk-bt_968.eot"); /* IE9 Compat Modes */
-	src: url("../fonts/Futura-Bk-BT/futura-bk-bt_968.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-		 url("../fonts/Futura-Bk-BT/futura-bk-bt_968.woff") format("woff"), /* Pretty Modern Browsers */
-		 url("../fonts/Futura-Bk-BT/futura-bk-bt_968.ttf")  format("truetype"), /* Safari, Android, iOS */
-		 url("../fonts/Futura-Bk-BT/futura-bk-bt_968.svg#svgFontName") format("svg"); /* Legacy iOS */
+	src: url("../fonts/Micra/Micra.eot"); /* IE9 Compat Modes */
+	src: url("../fonts/Micra/Micra.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+		 url("../fonts/Micra/Micra.woff") format("woff"), /* Pretty Modern Browsers */
+		 url("../fonts/Micra/Micra.ttf")  format("truetype"), /* Safari, Android, iOS */
+		 url("../fonts/Micra/Micra.svg#svgFontName") format("svg"); /* Legacy iOS */
 }
 
 @font-face {
